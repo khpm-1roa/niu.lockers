@@ -1,0 +1,186 @@
+<app-navbar></app-navbar>
+
+<div >
+    <img src="../../../.././../assets/NIU-LOCKER/picker/car.jpg" class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100; opacity: 0.75; ">
+
+    <section class="mt-5 border-top">
+        <div class="row">
+            <div class="col-3 border-end full-heigth">
+                <ul class="mx-2 p-2 list-group">
+                    <li class="list-group-item border-0 fs-5 fw-bolder text-info boton-desa" (click)="tap=0">Delivery API(END POINT 1)</li>
+                    <li class="list-group-item border-0 fs-5 fw-bolder text-info boton-desa" (click)="tap=1">Calculo de osto de entregas(END POINT 2)</li>
+                    <li class="list-group-item border-0 fs-5 fw-bolder text-info boton-desa" (click)="tap=2">Creacion del pedido(END POINT 3)</li>
+                    <li class="list-group-item border-0 fs-5 fw-bolder text-info boton-desa" (click)="tap=3">Asignacion del pedido(END POINT 4)</li>
+                    <li class="list-group-item border-0 fs-5 fw-bolder text-info boton-desa" (click)="tap=4">Actualizacion de estados (END POINT 5)</li>
+                </ul>
+            </div>
+<div class="col-9">
+    <div class="container" *ngIf="tap===0">
+        <div class="d-flex flex-row bd-highlight my-3">
+            <h3 class="fs-3 text-secondary m-2" *ngIf="!titulochan">{{titulo}}¿Cómo la API de Delivery funciona?</h3>
+            <input type="text" class="form-control" *ngIf="titulochan" [(ngModel)]="nuevoTitulo">
+            <button class="btn btn-success btn-sm" (click)="cambiarTitulo()"
+                *ngIf="!titulochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarTitulo()"
+                *ngIf="titulochan">guardar</button>
+        </div>
+
+        <div class="d-flex flex-row bd-highlight my-3">
+            <p class="text-dark m-2" *ngIf="!parrafochan">{{parrafo}}En el comercio digital, las entregas a domicilio son un eje importante del modelo de negocio y en Picker lo sabemos. Para poder construir una integración con Picker que maneje tus entregas a la perfección, es importante saber cómo funciona
+                lo que no vemos.
+                </p>
+            <input type="text" class="form-control" *ngIf="parrafochan" [(ngModel)]="nuevoParrafo">
+            <button class="btn btn-success btn-sm" (click)="cambiarParrafo()"
+                *ngIf="!parrafochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarParrafo()"
+                *ngIf="parrafochan">guardar</button>
+        </div>
+<img  src="../../../../../assets/NIU-LOCKER/carrusel/1.png" alt="" width="700" height="450" >
+    </div>
+
+    <div class="container" *ngIf="tap===1">
+        <div class="d-flex flex-row bd-highlight my-3">
+            <h3 class="fs-3 text-secondary m-2" *ngIf="!titulochan">{{titulo}}¿Cómo se calcula el costo de entrega?
+            </h3>
+            <input type="text" class="form-control" *ngIf="titulochan" [(ngModel)]="nuevoTitulo">
+            <button class="btn btn-success btn-sm" (click)="cambiarTitulo()"
+                *ngIf="!titulochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarTitulo()"
+                *ngIf="titulochan">guardar</button>
+
+        </div>
+
+        <div class="d-flex flex-row bd-highlight my-3">
+            <p class="text-dark m-2" *ngIf="!parrafochan">{{parrafo}}Tu cliente debe poder conocer el valor exacto de la entrega a pagar incluso antes de confirmar su pedido. Para eso Picker desarrolló esta conexión que te permite consultar el costo basado en la distancia y recibir un valor exacto para colocarlo en tu eCommerce.</p>
+            <input type="text" class="form-control" *ngIf="parrafochan" [(ngModel)]="nuevoParrafo">
+            <button class="btn btn-success btn-sm" (click)="cambiarParrafo()"
+                *ngIf="!parrafochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarParrafo()"
+                *ngIf="parrafochan">guardar</button>
+        </div>
+        <img  src="../../../../../assets/NIU-LOCKER/carrusel/2.png" alt="" width="700" height="450" >
+
+    </div>
+    <div class="container" *ngIf="tap===1">
+        <div class="d-flex flex-row bd-highlight my-3">
+            <h3 class="fs-3 text-secondary m-2" *ngIf="!titulochan">{{titulo}}Endpoint /api/preCheckout
+            </h3>
+            <input type="text" class="form-control" *ngIf="titulochan" [(ngModel)]="nuevoTitulo">
+            <button class="btn btn-success btn-sm" (click)="cambiarTitulo()"
+                *ngIf="!titulochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarTitulo()"
+                *ngIf="titulochan">guardar</button>
+
+        </div>
+
+        <div class="d-flex flex-row bd-highlight my-3">
+            <p class="text-dark m-2" *ngIf="!parrafochan">{{parrafo}}Picker usa /api/preCheckout como endpoint para recibir los siguientes datos: el API Key del local (punto de recogida) y las coordenadas del punto de entrega de un pedido y así poder calcular el costo del delivery entre esos dos puntos.</p>
+            <input type="text" class="form-control" *ngIf="parrafochan" [(ngModel)]="nuevoParrafo">
+            <button class="btn btn-success btn-sm" (click)="cambiarParrafo()"
+                *ngIf="!parrafochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarParrafo()"
+                *ngIf="parrafochan">guardar</button>
+        </div>
+        <img  src="../../../../../assets/NIU-LOCKER/carrusel/3.png" alt="" width="700" height="450" >
+
+    </div>
+    <div class="container" *ngIf="tap===1">
+        <div class="d-flex flex-row bd-highlight my-3">
+            <h3 class="fs-3 text-secondary m-2" *ngIf="!titulochan">{{titulo}}Recibir deliveryFee
+                           </h3>
+            <input type="text" class="form-control" *ngIf="titulochan" [(ngModel)]="nuevoTitulo">
+            <button class="btn btn-success btn-sm" (click)="cambiarTitulo()"
+                *ngIf="!titulochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarTitulo()"
+                *ngIf="titulochan">guardar</button>
+
+        </div>
+
+        <div class="d-flex flex-row bd-highlight my-3">
+            <p class="text-dark m-2" *ngIf="!parrafochan">{{parrafo}}Picker usa /api/preCheckout como endpoint para recibir los siguientes datos: el API Key del local (punto de recogida) y las coordenadas del punto de entrega de un pedido y así poder calcular el costo del delivery entre esos dos puntos.</p>
+            <input type="text" class="form-control" *ngIf="parrafochan" [(ngModel)]="nuevoParrafo">
+            <button class="btn btn-success btn-sm" (click)="cambiarParrafo()"
+                *ngIf="!parrafochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarParrafo()"
+                *ngIf="parrafochan">guardar</button>
+        </div>
+        <img  src="../../../../../assets/NIU-LOCKER/carrusel/4.png" alt="" width="700" height="450" >
+    </div>
+
+    <div class="container" *ngIf="tap===2">
+        <div class="d-flex flex-row bd-highlight my-3">
+            <h3 class="fs-3 text-secondary m-2" *ngIf="!titulochan">{{titulo}}Pedidos pasados (Opcional)</h3>
+            <input type="text" class="form-control" *ngIf="titulochan" [(ngModel)]="nuevoTitulo">
+            <button class="btn btn-success btn-sm" (click)="cambiarTitulo()"
+                *ngIf="!titulochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarTitulo()"
+                *ngIf="titulochan">guardar</button>
+
+        </div>
+
+        <div class="d-flex flex-row bd-highlight my-3">
+            <p class="text-dark m-2" *ngIf="!parrafochan">{{parrafo}}Si quieres registrar en tu plataforma una lista de todos los pedidos anteriores hechos a través de Picker, puedes consultar los datos en este endpoint. Picker te ofrece una conexión a un dashboard de control de pedidos donde ya se guarda el histórico. Pero también tienes la opción de almacenarlos directamente en tu plataforma.
+            </p>
+            <input type="text" class="form-control" *ngIf="parrafochan" [(ngModel)]="nuevoParrafo">
+            <button class="btn btn-success btn-sm" (click)="cambiarParrafo()"
+                *ngIf="!parrafochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarParrafo()"
+                *ngIf="parrafochan">guardar</button>
+        </div>
+        <img  src="../../../../../assets/NIU-LOCKER/carrusel/1.png" alt="" width="700" height="450" >
+
+    </div>
+
+    <div class="container" *ngIf="tap===3">
+        <div class="d-flex flex-row bd-highlight my-3">
+            <h3 class="fs-3 text-secondary m-2" *ngIf="!titulochan">{{titulo}}¿Cómo se asigna un pedido a un repartidor?</h3>
+            <input type="text" class="form-control" *ngIf="titulochan" [(ngModel)]="nuevoTitulo">
+            <button class="btn btn-success btn-sm" (click)="cambiarTitulo()"
+                *ngIf="!titulochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarTitulo()"
+                *ngIf="titulochan">guardar</button>
+
+        </div>
+
+        <div class="d-flex flex-row bd-highlight my-3">
+            <p class="text-dark m-2" *ngIf="!parrafochan">{{parrafo}}Una vez creado el pedido, el servidor de Picker empezará la búsqueda de un repartidor cercano disponible y le asignará el pedido. Cuando un conductor acepte el pedido, se enviará un POST request del servidor de Picker a la url que el negocio especificó para manejar el evento de DRIVER_ASSIGNED.</p>
+            <input type="text" class="form-control" *ngIf="parrafochan" [(ngModel)]="nuevoParrafo">
+            <button class="btn btn-success btn-sm" (click)="cambiarParrafo()"
+                *ngIf="!parrafochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarParrafo()"
+                *ngIf="parrafochan">guardar</button>
+        </div>
+        <img  src="../../../../../assets/NIU-LOCKER/carrusel/2.png" alt="" width="700" height="450" >
+
+    </div>
+
+    <div class="container" *ngIf="tap===4">
+        <div class="d-flex flex-row bd-highlight my-3">
+            <h3 class="fs-3 text-secondary m-2" *ngIf="!titulochan">{{titulo}} URL/Endpoint/Webhook UPDATE_BOOKING_STATUS</h3>
+            <input type="text" class="form-control" *ngIf="titulochan" [(ngModel)]="nuevoTitulo">
+            <button class="btn btn-success btn-sm" (click)="cambiarTitulo()"
+                *ngIf="!titulochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarTitulo()"
+                *ngIf="titulochan">guardar</button>
+
+        </div>
+
+
+        <div class="d-flex flex-row bd-highlight my-3">
+            <p class="text-dark m-2" *ngIf="!parrafochan">{{parrafo}}Picker requiere que se haya creado previamente por tu lado la url/endpoint/webhook denomidada DRIVER_ASSIGNED, donde se te enviará un JSON con los datos del repartidor asignado a unPicker requiere que se haya creado previamente por tu lado la url/endpoint/webhook denomidada DRIVER_ASSIGNED, donde se te enviará un JSON con los datos del repartidor asignado a un pedido. pedido.</p>
+            <input type="text" class="form-control" *ngIf="parrafochan" [(ngModel)]="nuevoParrafo">
+            <button class="btn btn-success btn-sm" (click)="cambiarParrafo()"
+                *ngIf="!parrafochan">cambiar</button>
+            <button class="btn btn-success btn-sm" (click)="guardarParrafo()"
+                *ngIf="parrafochan">guardar</button>
+        </div>
+        <img  src="../../../../../assets/NIU-LOCKER/carrusel/3.png" alt="" width="700" height="450" >
+
+    </div>
+</div>
+<br>
+<div>
+    <div>
+    <br>
+
+<app-footer></app-footer>
