@@ -11,25 +11,21 @@ export class LoginComponent implements OnInit {
 
   
    private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
   loginForm!: FormGroup;
-
   errorLogin: boolean = false;
 
   constructor(
     private fb: FormBuilder,
     private router: Router
   ) { }
-
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email:['',[Validators.required, Validators.email,Validators.pattern(this.emailPattern)]],
-      password:['', [Validators.required, Validators.minLength(6)]] 
+      password:['', [Validators.required, Validators.minLength(6),Validators.maxLength(9)]] 
      
    
     })
   }
-
   public login(){
     if(this.loginForm.valid){
       console.log(this.loginForm.value);

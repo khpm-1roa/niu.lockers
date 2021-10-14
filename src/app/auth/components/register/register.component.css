@@ -48,14 +48,12 @@ button:focus {
 }
 
 .card2 {
+    color: black;
     width: 50%;
-    background-image: linear-gradient(to right, #ad4744, #bec4c3)
+    background-image: linear-gradient(to right, #9feffa, #bec4c3)
 }
 
-#logo {
-   
-    border-radius:200px;
-}
+
 
 .heading {
     margin-bottom: 60px !important
@@ -86,8 +84,8 @@ button:focus {
 
 .btn-color {
     border-radius: 50px;
-    color: #fff;
-    background-image: linear-gradient(to right, #898a8a, #ad4744);
+    color: rgb(8, 6, 6);
+    background-image: linear-gradient(to right, #898a8a, #92f6ff);
     padding: 15px;
     cursor: pointer;
     border: none !important;
@@ -96,21 +94,21 @@ button:focus {
 
 .btn-color:hover {
     color: #fff;
-    background-image: linear-gradient(to right, #ad4744, #899291)
+    background-image: linear-gradient(to right, #91e0ff, #899291)
 }
 
 .btn-white {
     border-radius: 50px;
-    color: #ad4744;
+    color: #000000 ;
     background-color: #fff;
     padding: 8px 40px;
     cursor: pointer;
-    border: 2px solid #ad4744 !important
+    border: 2px solid #a4f4ff !important
 }
 
 .btn-white:hover {
-    color: #fff;
-    background-image: linear-gradient(to right, #bec4c3, #ad4744)
+    color: rgb(2, 1, 1);
+    background-image: linear-gradient(to right, #bec4c3, #9cedf8)
 }
 
 a {

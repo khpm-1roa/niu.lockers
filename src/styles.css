@@ -27,7 +27,7 @@ textarea:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #b14e41 !important;
+    border: 1px solid #8cf2ff !important;
     outline-width: 0;
     font-weight: 400
 }
@@ -50,8 +50,9 @@ button:focus {
 }
 
 .card2 {
+    color:black;
     width: 50%;
-    background-image: linear-gradient(to right,  #ad4744, #bec4c3)
+    background-image: linear-gradient(to right,  #4ef3ff, #bec4c3)
 }
 
 #logo {
@@ -89,7 +90,7 @@ button:focus {
 .btn-color {
     border-radius: 50px;
     color: rgb(252, 250, 250);
-    background-image: linear-gradient(to right,  #898a8a, #ad4744);
+    background-image: linear-gradient(to right,  #898a8a, #a2ffff);
     padding: 15px;
     cursor: pointer;
     border: none !important;
@@ -98,12 +99,12 @@ button:focus {
 
 .btn-color:hover {
     color: #fff;
-    background-image: linear-gradient(to right,  #ad4744, #899291)
+    background-image: linear-gradient(to right,  #a7fcff, #899291)
 }
 
 .btn-white {
     border-radius: 50px;
-    color: #e66d69;
+    color: #060707;
     background-color: #fff;
     padding: 8px 40px;
     cursor: pointer;
@@ -111,8 +112,8 @@ button:focus {
 }
 
 .btn-white:hover {
-    color: #fff;
-    background-image: linear-gradient(to right,  #bec4c3, #ad4744)
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right,  #98f8e8, hsl(189, 100%, 78%))
 }
 
 a {
