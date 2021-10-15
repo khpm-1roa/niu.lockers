@@ -17,7 +17,9 @@
                                     <label class="form-control-label text-muted">Nombre</label> 
                                     <input type="text" id="name" placeholder="Ingrese su nombre y apellido" class="form-control" formControlName="name" ngModel required> 
                                     <div *ngIf=" registroForm.controls.name.touched" class="text-danger">
-                                        <div *ngIf=" registroForm.controls.name.errors?.name">nombre requerido
+                                        <div *ngIf=" registroForm.controls.name.errors?.required">nombre requerido
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.name.errors?.minLength">minimo de caracteres es incorrecto
                                         </div>
                                       </div>
                                 </div>
@@ -25,16 +27,24 @@
                                     <label class="form-control-label text-muted">Email</label> 
                                     <input type="text" id="email" placeholder="Ingrese su correo electrónico" class="form-control" formControlName="email" ngModel required> 
                                <div *ngIf=" registroForm.controls.email.touched" class="text-danger">
-                                        <div *ngIf=" registroForm.controls.email.errors?.email">El email no es válido
+                                <div *ngIf=" registroForm.controls.email.errors?.required">ingrese el email
+                                </div>
+                                        <div *ngIf=" registroForm.controls.email.errors?.pattern">El email no es válido
                                         </div>
                                 </div>
                                 <div class="form-group"> 
-                                    <label class="form-control-label text-muted">Constraseña</label> 
+                                    <label class="form-control-label text-muted">Contraseña</label> 
                                     <input type="password" id="psw" placeholder="Contraseña" class="form-control" formControlName="password" ngModel required> 
                                     <div *ngIf=" registroForm.controls.password.touched" class="text-danger" >
-                                        <div *ngIf=" registroForm.controls.password.errors?.password">contraseña invalida
+                                        <div *ngIf=" registroForm.controls.password.errors?.required">{{propiedades.errorPassword}}
                                         </div>
+                                       
+
                                       </div>
+                                       <div *ngIf=" registroForm.controls.password.errors?.minlength">minimo de caracteres es incorrecto
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.password.errors?.maxlength"> exedio el maximo de caracteres 
+                                        </div>
                                 </div>
                                 <div class="row justify-content-center my-3 px-3"> 
                                     <button  type="submit" class="btn-block btn-color" >Registrarse</button> 
@@ -56,7 +66,6 @@
                     <h3 class="text-white">Visión</h3>
                      <small >Ser la empresa líder en servicios con calidad de punta tanto en servicios de transporte y distribución de productos, la conservación y procesamiento de estos, que generen valor agregado al cliente y se conviertan en alternativas para el desarrollo económico, social y cultural de clientes, empleados y accionistas.</small>
                     <br><br>
-                    <img  src="../../../../assets/Slider/Locker-2.png " width="350" height="250"> 
                 </div>
             </div>
         </div>

@@ -28,12 +28,19 @@ export class LoginComponent implements OnInit {
   }
   public login(){
     if(this.loginForm.valid){
-      console.log(this.loginForm.value);
-      this.router.navigate(['/'])
+     const datos =this.loginForm.value;
+     if(datos.email === "admin@admin.com")  {
+       this.router.navigate(["admin"])
+     }else{
+       this.router.navigate(["client"])
+     }
     }
   }
 
 }
+
+
+
 
 // export class LoginComponent {
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Propiedades } from 'src/app/shared/util/propiedades';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  
+
+  propiedades:Propiedades =new Propiedades();
+
   private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   registroForm!: FormGroup;
   errorregistro: boolean = false;
@@ -19,8 +22,8 @@ export class RegisterComponent implements OnInit {
   ) { }
   ngOnInit(): void {
     this.registroForm = this.fb.group({
-      name:['', [Validators.required, Validators.minLength(6),Validators.maxLength(9)]] ,
-      email:['',[Validators.required, Validators.email,Validators.pattern(this.emailPattern)]],
+      name:['', [Validators.required, Validators.minLength(6)]],
+      email:['',[Validators.required,Validators.pattern(this.emailPattern)]],
       password:['', [Validators.required, Validators.minLength(6),Validators.maxLength(9)]] 
      
    
