@@ -11,39 +11,70 @@
                             <img id="logo" src="../../../assets/NIU-LOCKER/Logo-NiuSmart.svg" > 
                         </div>
                         <h3 class="mb-5 text-center heading">Registrase Niu-Locker</h3>
-                            <h6 class="msg-info" style="font-weight: bold;font-size:small">Llenes con sus datos</h6>
+                            <h4 class="msg-info" style="font-weight: bold;font-size:small">INGRESE SUS DATOS PERSONALES </h4>
                             <form [formGroup]="registroForm" >
                                 <div class="form-group"> 
                                     <label class="form-control-label text-muted">Nombre</label> 
-                                    <input type="text" id="name" placeholder="Ingrese su nombre y apellido" class="form-control" formControlName="name" ngModel required> 
+                                    <input type="text" id="name" placeholder="Ingrese su nombre " class="form-control" formControlName="name" > 
                                     <div *ngIf=" registroForm.controls.name.touched" class="text-danger">
-                                        <div *ngIf=" registroForm.controls.name.errors?.required">nombre requerido
+                                        <div *ngIf=" registroForm.controls.name.errors?.required">{{propiedades.errorNombre}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.name.errors?.minLength">minimo de caracteres es incorrecto
+                                        <div *ngIf=" registroForm.controls.name.errors?.minlength">{{propiedades.errorNombre}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.name.errors?.maxlength">{{propiedades.errorNombre}}
                                         </div>
                                       </div>
                                 </div>
+
+                                <div class="form-group"> 
+                                    <label class="form-control-label text-muted">Apellido</label> 
+                                    <input type="text" id="names" placeholder="Ingrese su  apellido" class="form-control" formControlName="names" > 
+                                    <div *ngIf=" registroForm.controls.names.touched" class="text-danger">
+                                        <div *ngIf=" registroForm.controls.names.errors?.required">{{propiedades.errorApellido}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.names.errors?.minlength">{{propiedades.errorApellidoMin}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.names.errors?.maxlength">{{propiedades.errorApellidoMax}}
+                                        </div>
+                                      </div>
+                                </div>
+
+                                <div class="form-group"> 
+                                    <label class="form-control-label text-muted">telefono</label> 
+                                    <input type="text" id="celular" placeholder="Ingrese su telefono" class="form-control" formControlName="celular" > 
+                                    <div *ngIf=" registroForm.controls.celular.touched" class="text-danger">
+                                        <div *ngIf=" registroForm.controls.celular.errors?.required">{{propiedades.errorTelefono}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.celular.errors?.minlength">{{propiedades.errorTelefonoMin}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.celular.errors?.maxlength">{{propiedades.errorTelefonoMax}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.celular.errors?.pattern"> {{propiedades.errorTelefonoNum}}
+                                        </div>
+                                      </div>
+                                </div>
+
                                 <div class="form-group"> 
                                     <label class="form-control-label text-muted">Email</label> 
-                                    <input type="text" id="email" placeholder="Ingrese su correo electrónico" class="form-control" formControlName="email" ngModel required> 
+                                    <input type="text" id="email" placeholder="Ingrese su correo electrónico" class="form-control" formControlName="email"> 
                                <div *ngIf=" registroForm.controls.email.touched" class="text-danger">
-                                <div *ngIf=" registroForm.controls.email.errors?.required">ingrese el email
+                                <div *ngIf=" registroForm.controls.email.errors?.required">{{propiedades.errorEmail}}
                                 </div>
-                                        <div *ngIf=" registroForm.controls.email.errors?.pattern">El email no es válido
+                                        <div *ngIf=" registroForm.controls.email.errors?.pattern">{{propiedades.errorEmailFormato}}
                                         </div>
                                 </div>
                                 <div class="form-group"> 
                                     <label class="form-control-label text-muted">Contraseña</label> 
-                                    <input type="password" id="psw" placeholder="Contraseña" class="form-control" formControlName="password" ngModel required> 
+                                    <input type="password" id="psw" placeholder="Contraseña" class="form-control" formControlName="password" > 
                                     <div *ngIf=" registroForm.controls.password.touched" class="text-danger" >
                                         <div *ngIf=" registroForm.controls.password.errors?.required">{{propiedades.errorPassword}}
                                         </div>
                                        
 
                                       </div>
-                                       <div *ngIf=" registroForm.controls.password.errors?.minlength">minimo de caracteres es incorrecto
+                                       <div *ngIf=" registroForm.controls.password.errors?.minlength">{{propiedades.errorPasswordMin}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.password.errors?.maxlength"> exedio el maximo de caracteres 
+                                        <div *ngIf=" registroForm.controls.password.errors?.maxlength">{{propiedades.errorPasswordMax}} 
                                         </div>
                                 </div>
                                 <div class="row justify-content-center my-3 px-3"> 
