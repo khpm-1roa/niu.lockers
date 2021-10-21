@@ -1,23 +1,27 @@
 // ERRORES DEL LOGIN-REGISTRO
 export class Propiedades {
-    errorPassword:string="incorrecto contraseña  necesaria";
-    errorPasswordMin:string="minimo de caracteres es incorrecto";
-    errorPasswordMax:string="exedio el maximo de caracteres";
+    errorPassword:string="El campo es  necesario";
+    errorPasswordMin:string="El minimo de caracteres es incorrecto";
+    errorPasswordMax:string="El maxímo de caracteres fue exedido";
+    errorPasswordCarac:string="El campo permite caracteres expeciales a-zA-Z#@_*-";
 
-    errorEmail:string="incorrecto correo  necesario";
+    errorEmail:string="El campo es  necesario";
     errorEmailFormato:string="El email no es válido";
 
-    errorTelefono:string="incorrecto telefono necesario";
-    errorTelefonoMin:string="minimo de caracteres es incorrecto";
-    errorTelefonoMax:string="exedio el maximo de caracteres";
-    errorTelefonoNum:string="ingrese caracteres numericos" ;
+    errorTelefono:string="El  telefono es necesario";
+    errorTelefonoMin:string="El minimo de caracteres es incorrecto";
+    errorTelefonoMax:string="El telefono es incorrecto";
+     errorTelefonoNum:string="Solo acepta caracteres numericos" ;
 
-    errorApellido:string="apellido requerido"
-    errorApellidoMin:string="minimo de caracteres es incorrecto"
-    errorApellidoMax:string="exedio el maximo de caracteres"
+    errorEmpresa:string="El nombre de la empresa es necesario";
 
-    errorNombre:string="nombre requerido"
-    errorNombreMin:string="minimo de caracteres es incorrecto"
-    errorNombreMax:string="exedio el maximo de caracteres"
+    errorApellido:string="El campo es  necesario";
+    errorApellidoMin:string="El minimo de caracteres es incorrecto";
+    errorApellidoMax:string="El maxímo de caracteres fue exedidos";
+
+    errorNombre:string="El campo es  necesario";
+    errorNombreMin:string="El minimo de caracteres es incorrecto";
+    errorNombreMax:string="El maxímo de caracteres fue exedido";
+    errorNombreCarac:string="El campo solo acepta caracteres"; 
 
 } 

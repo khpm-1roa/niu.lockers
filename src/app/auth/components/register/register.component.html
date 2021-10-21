@@ -19,9 +19,11 @@
                                     <div *ngIf=" registroForm.controls.name.touched" class="text-danger">
                                         <div *ngIf=" registroForm.controls.name.errors?.required">{{propiedades.errorNombre}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.name.errors?.minlength">{{propiedades.errorNombre}}
+                                        <div *ngIf=" registroForm.controls.name.errors?.minlength">{{propiedades.errorNombreMin}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.name.errors?.maxlength">{{propiedades.errorNombre}}
+                                        <div *ngIf=" registroForm.controls.name.errors?.maxlength">{{propiedades.errorNombreMax}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.name.errors?.pattern">{{propiedades.errorNombreCarac}}
                                         </div>
                                       </div>
                                 </div>
@@ -36,7 +38,20 @@
                                         </div>
                                         <div *ngIf=" registroForm.controls.names.errors?.maxlength">{{propiedades.errorApellidoMax}}
                                         </div>
+                                        <div *ngIf=" registroForm.controls.names.errors?.pattern">{{propiedades.errorNombreCarac}}
+                                        </div>
                                       </div>
+                                </div>
+
+                                <div class="form-group"> 
+                                    <label class="form-control-label text-muted">Nombre de la empresa </label> 
+                                    <input type="text" id="empresa" placeholder="Ingrese el nombre de la Empresa " class="form-control" formControlName="empresa" > 
+                                    <div *ngIf=" registroForm.controls.empresa.touched" class="text-danger">
+                                        <div *ngIf=" registroForm.controls.empresa.errors?.required">{{propiedades.errorEmpresa}}
+                                        </div>
+                                        <div *ngIf=" registroForm.controls.empresa.errors?.pattern">{{propiedades.errorNombreCarac}}
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="form-group"> 
@@ -49,8 +64,9 @@
                                         </div>
                                         <div *ngIf=" registroForm.controls.celular.errors?.maxlength">{{propiedades.errorTelefonoMax}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.celular.errors?.pattern"> {{propiedades.errorTelefonoNum}}
+                                        <div *ngIf=" registroForm.controls.celular.errors?.pattern">{{propiedades.errorTelefonoNum}}
                                         </div>
+                                    
                                       </div>
                                 </div>
 
@@ -65,18 +81,29 @@
                                 </div>
                                 <div class="form-group"> 
                                     <label class="form-control-label text-muted">Contraseña</label> 
-                                    <input type="password" id="psw" placeholder="Contraseña" class="form-control" formControlName="password" > 
+                                    <input type="password" id="psw" placeholder="Contraseña" class="form-control"  formControlName="password" > 
                                     <div *ngIf=" registroForm.controls.password.touched" class="text-danger" >
                                         <div *ngIf=" registroForm.controls.password.errors?.required">{{propiedades.errorPassword}}
                                         </div>
                                        
-
                                       </div>
                                        <div *ngIf=" registroForm.controls.password.errors?.minlength">{{propiedades.errorPasswordMin}}
                                         </div>
                                         <div *ngIf=" registroForm.controls.password.errors?.maxlength">{{propiedades.errorPasswordMax}} 
                                         </div>
+                                        <div *ngIf=" registroForm.controls.password.errors?.pattern">{{propiedades.errorPasswordCarac}}
+                                        </div>
                                 </div>
+
+                                <!-- <div [formGroup]="form"> 
+                                    <label class="form-control-label text-muted">Verificar Contraseña</label> 
+                                    <input type="password" id="pasword" placeholder="Contraseña" class="form-control"  formControlName="confirmarPassword"  > 
+                                    <div *ngIf=" registroForm.controls.password.touched" class="text-danger" >
+                                        <div *ngIf=" registroForm.controls.password.errors?.required">{{propiedades.errorPassword}}
+                                        </div>
+                                        <div class="mat-error" *ngIf="checarSiSonIguales()">Las contraseñas no coinciden</div>
+                                       </div>
+                                </div> -->
                                 <div class="row justify-content-center my-3 px-3"> 
                                     <button  type="submit" class="btn-block btn-color" >Registrarse</button> 
                                     

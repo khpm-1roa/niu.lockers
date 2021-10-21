@@ -5,7 +5,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
-
+import { LockersRoutesService } from './service/lockers-routes.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,11 +16,15 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
   ],
   exports:[
     NavbarComponent,
     FooterComponent
+  ],
+  providers:[
+    LockersRoutesService
   ]
 })
 export class SharedModule { }
