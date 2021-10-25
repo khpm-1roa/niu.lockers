@@ -67,7 +67,7 @@ export class RegisterComponent implements OnInit {
 
       this.lockers.registerUser(newUser)
         .subscribe((res:any)=>{
-          console.log('Repsuesta del servicio',res)
+          console.log('Respuesta del servicio',res)
           this.router.navigate(['/login']);
         },err=>{
           console.log('Hubo un eror', err)
