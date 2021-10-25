@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
-      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(9)]]
+      password: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(50)]]
 
 
     })
@@ -48,7 +48,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('accessToken',JSON.stringify(token))
           /* Desencriptar el token */
 
-          let idUser:number = 4 /* Aqui colocar la id del toekn desencriptado */
+          let idUser:number = 2 /* Aqui colocar la id del token desencriptado */
 
           this.locker.getUserData(idUser)
             .subscribe((res:any)=>{
