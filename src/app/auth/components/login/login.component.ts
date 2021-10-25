@@ -1,3 +1,5 @@
+import { LoginUserModel } from './../../models/login';
+import { LockersRoutesService } from './../../../shared/service/lockers-routes.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -10,32 +12,60 @@ import { Propiedades } from 'src/app/shared/util/propiedades';
 })
 export class LoginComponent implements OnInit {
 
-  propiedades:Propiedades =new Propiedades();
+  propiedades: Propiedades = new Propiedades();
 
-   private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   loginForm!: FormGroup;
   errorLogin: boolean = false;
 
   constructor(
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private locker: LockersRoutesService
   ) { }
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      email:['',[Validators.required,Validators.pattern(this.emailPattern)]],
-      password:['', [Validators.required, Validators.minLength(6),Validators.maxLength(9)]] 
-     
-   
+      email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(9)]]
+
+
     })
   }
-  public login(){
-    if(this.loginForm.valid){
-     const datos =this.loginForm.value;
-     if(datos.email === "admin@admin.com")  {
-       this.router.navigate(["admin"])
-     }else{
-       this.router.navigate(["client"])
-     }
+  public login() {
+    if (this.loginForm.valid) {
+
+      const datos = this.loginForm.value;
+
+      const userLogin: LoginUserModel = {
+        email_user: datos.email,
+        password: datos.password
+      }
+
+      this.locker.loginUsers(userLogin)
+        .subscribe((res:any)=>{
+          console.log('Respuesta', res);
+          const token = res.token;
+          localStorage.setItem('accessToken',JSON.stringify(token))
+          /* Desencriptar el token */
+
+          let idUser:number = 4 /* Aqui colocar la id del toekn desencriptado */
+
+          this.locker.getUserData(idUser)
+            .subscribe((res:any)=>{
+              console.log('respues data',res);
+              localStorage.setItem('userData',JSON.stringify(res));
+              if(res.rol_id == 1){
+                this.router.navigate(["client"])
+              }
+              if(res.rol_id == 2){
+                this.router.navigate(["admin"])
+              }
+            },err=>{
+              console.log(err)
+            })
+        },err=>{
+          console.log('Error',err)
+        })
     }
   }
 
@@ -58,13 +88,13 @@ export class LoginComponent implements OnInit {
 
 //   get passwork() { return this.LoginForm.get('passwork'); }
 //   get email() { return this.LoginForm.get('email'); }
- 
+
 
 //   createForm() {
 //     return new FormGroup({
 //       email: new FormControl('', [Validators.required, Validators.minLength(5), Validators.pattern(this.emailPattern)]),
 //       passwork: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      
+
 //     });
 //   }
 

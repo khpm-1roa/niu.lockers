@@ -1,8 +1,9 @@
-<br><br><br>
+<app-navbar></app-navbar>
+
 <section id="work" class="portfolio-mf sect-pt4 route m-t-40 container">
 	<div class="mb-4 text-center">
 		<h2 class="title-a">
-			Perfil Administrador
+			Perfil Cliente
 		</h2>
 		<div class="line-mf"></div>
 	</div>
@@ -15,36 +16,29 @@
                 <h3 class="text-info"></h3>
             </div>
         </div>
-        <!-- Datos de admin -->
+        <!-- Datos de asociado -->
         <div class="card">
             <div class="card-header text-center">
                 <h3 class="text-info">Perfil</h3>
             </div>
             <div class="card-body text-center">
                 <div class="thumbnail" style="align-content: center">
-        <!-- para acceder se sa con la interpolacion {{}}-->
-                    ID : {{userData.id}}
+
+                    Nombre : Kevin Pillajo
                 </div>
                 <br>
                 <div class="text-primary">
-                   NOMBRE: {{userData.name_user}}
+                   Correo:Kevin@811.com
                 </div>
                 <br>
                 <div class="pb-1">
-                    CORREO: {{userData.email_user}}
+                    Token lectura: 1231
                 </div>
                 <br>
                 <div class=" text-primary">
-                  ROL: {{userData.rol_id == 2 ? 'Administrador' : 'Cliente' }}
+                   Nombre de la empresa : Niu-Locker
                 </div>
-                <br>
-                <div class="pb-1">
-                    TOKEN : {{token}}
-                </div>
-                <br>
-                <br>
-                <br>
             </div>
-            <button type="submit"  class="btn-block btn-color">ELIMINAR</button>
+            <button type="submit"  class="btn-block btn-color">Modificar</button>
         </div>
 </section>

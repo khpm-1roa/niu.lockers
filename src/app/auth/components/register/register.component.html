@@ -7,15 +7,15 @@
             <div class="card card1">
                 <div class="row justify-content-center my-auto">
                     <div class="col-md-8 col-10 my-5">
-                        <div class="row justify-content-center px-3 mb-3"> 
-                            <img id="logo" src="../../../assets/NIU-LOCKER/Logo-NiuSmart.svg" > 
+                        <div class="row justify-content-center px-3 mb-3">
+                            <img id="logo" src="../../../assets/NIU-LOCKER/Logo-NiuSmart.svg" >
                         </div>
                         <h3 class="mb-5 text-center heading">Registrase Niu-Locker</h3>
                             <h4 class="msg-info" style="font-weight: bold;font-size:small">INGRESE SUS DATOS PERSONALES </h4>
-                            <form [formGroup]="registroForm" >
-                                <div class="form-group"> 
-                                    <label class="form-control-label text-muted">Nombre:</label> 
-                                    <input type="text" id="name" placeholder="Ingrese su nombre " class="form-control" formControlName="name" > 
+                            <form [formGroup]="registroForm" (ngSubmit)="register()">
+                                <div class="form-group">
+                                    <label class="form-control-label text-muted">Nombre:</label>
+                                    <input type="text" id="name" placeholder="Ingrese su nombre " class="form-control" formControlName="name" >
                                     <div *ngIf=" registroForm.controls.name.touched" class="text-danger">
                                         <div *ngIf=" registroForm.controls.name.errors?.required">{{propiedades.errorNombre}}
                                         </div>
@@ -28,9 +28,9 @@
                                       </div>
                                 </div>
 
-                                <div class="form-group"> 
-                                    <label class="form-control-label text-muted">Apellido</label> 
-                                    <input type="text" id="names" placeholder="Ingrese su  apellido" class="form-control" formControlName="names" > 
+                                <div class="form-group">
+                                    <label class="form-control-label text-muted">Apellido</label>
+                                    <input type="text" id="names" placeholder="Ingrese su  apellido" class="form-control" formControlName="names" >
                                     <div *ngIf=" registroForm.controls.names.touched" class="text-danger">
                                         <div *ngIf=" registroForm.controls.names.errors?.required">{{propiedades.errorApellido}}
                                         </div>
@@ -43,9 +43,9 @@
                                       </div>
                                 </div>
 
-                                <div class="form-group"> 
-                                    <label class="form-control-label text-muted">Nombre de la empresa </label> 
-                                    <input type="text" id="empresa" placeholder="Ingrese el nombre de la Empresa " class="form-control" formControlName="empresa" > 
+                                <div class="form-group">
+                                    <label class="form-control-label text-muted">Nombre de la empresa </label>
+                                    <input type="text" id="empresa" placeholder="Ingrese el nombre de la Empresa " class="form-control" formControlName="empresa" >
                                     <div *ngIf=" registroForm.controls.empresa.touched" class="text-danger">
                                         <div *ngIf=" registroForm.controls.empresa.errors?.required">{{propiedades.errorEmpresa}}
                                         </div>
@@ -54,9 +54,9 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group"> 
-                                    <label class="form-control-label text-muted">telefono</label> 
-                                    <input type="text" id="celular" placeholder="Ingrese su telefono" class="form-control" formControlName="celular" > 
+                                <div class="form-group">
+                                    <label class="form-control-label text-muted">telefono</label>
+                                    <input type="text" id="celular" placeholder="Ingrese su telefono" class="form-control" formControlName="celular" >
                                     <div *ngIf=" registroForm.controls.celular.touched" class="text-danger">
                                         <div *ngIf=" registroForm.controls.celular.errors?.required">{{propiedades.errorTelefono}}
                                         </div>
@@ -66,58 +66,58 @@
                                         </div>
                                         <div *ngIf=" registroForm.controls.celular.errors?.pattern">{{propiedades.errorTelefonoNum}}
                                         </div>
-                                    
+
                                       </div>
                                 </div>
 
-                                <div class="form-group"> 
-                                    <label class="form-control-label text-muted">Email</label> 
-                                    <input type="text" id="email" placeholder="Ingrese su correo electrónico" class="form-control" formControlName="email"> 
+                                <div class="form-group">
+                                    <label class="form-control-label text-muted">Email</label>
+                                    <input type="text" id="email" placeholder="Ingrese su correo electrónico" class="form-control" formControlName="email">
                                <div *ngIf=" registroForm.controls.email.touched" class="text-danger">
                                 <div *ngIf=" registroForm.controls.email.errors?.required">{{propiedades.errorEmail}}
                                 </div>
                                         <div *ngIf=" registroForm.controls.email.errors?.pattern">{{propiedades.errorEmailFormato}}
                                         </div>
                                 </div>
-                                <div class="form-group"> 
-                                    <label class="form-control-label text-muted">Contraseña</label> 
-                                    <input type="password" id="psw" placeholder="Contraseña" class="form-control"  formControlName="password" > 
+                                <div class="form-group">
+                                    <label class="form-control-label text-muted">Contraseña</label>
+                                    <input type="password" id="psw" placeholder="Contraseña" class="form-control"  formControlName="password" >
                                     <div *ngIf=" registroForm.controls.password.touched" class="text-danger" >
                                         <div *ngIf=" registroForm.controls.password.errors?.required">{{propiedades.errorPassword}}
                                         </div>
-                                       
+
                                       </div>
                                        <div *ngIf=" registroForm.controls.password.errors?.minlength">{{propiedades.errorPasswordMin}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.password.errors?.maxlength">{{propiedades.errorPasswordMax}} 
+                                        <div *ngIf=" registroForm.controls.password.errors?.maxlength">{{propiedades.errorPasswordMax}}
                                         </div>
                                         <div *ngIf=" registroForm.controls.password.errors?.pattern">{{propiedades.errorPasswordCarac}}
                                         </div>
                                 </div>
 
-                                <!-- <div [formGroup]="form"> 
-                                    <label class="form-control-label text-muted">Verificar Contraseña</label> 
-                                    <input type="password" id="pasword" placeholder="Contraseña" class="form-control"  formControlName="confirmarPassword"  > 
+                                <!-- <div [formGroup]="form">
+                                    <label class="form-control-label text-muted">Verificar Contraseña</label>
+                                    <input type="password" id="pasword" placeholder="Contraseña" class="form-control"  formControlName="confirmarPassword"  >
                                     <div *ngIf=" registroForm.controls.password.touched" class="text-danger" >
                                         <div *ngIf=" registroForm.controls.password.errors?.required">{{propiedades.errorPassword}}
                                         </div>
                                         <div class="mat-error" *ngIf="checarSiSonIguales()">Las contraseñas no coinciden</div>
                                        </div>
                                 </div> -->
-                                <div class="row justify-content-center my-3 px-3"> 
-                                    <button  type="submit" class="btn-block btn-color" >Registrarse</button> 
-                                    
+                                <div class="row justify-content-center my-3 px-3">
+                                    <button  type="submit" class="btn-block btn-color" >Registrarse</button>
+
                                 </div>
                                 <div class="bottom text-center mb-5">
                                     <p class="sm-text mx-auto mb-3" >Ya tienes cuenta? Entra al <a routerLink='/login' class="btn btn-white ml-2" > Login</a></p>
                                 </div>
-                            
+
                         </div>
                         </form>
                                             </div>
-                                        
+
                 </div>
-               
+
             </div>
             <div class="card card2">
                 <div class="my-auto mx-md-5 px-md-5 right">

@@ -6,7 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
 import { LockersRoutesService } from './service/lockers-routes.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent
   ],
   providers:[
-    LockersRoutesService
+    LockersRoutesService,
+    HttpClient
   ]
 })
 export class SharedModule { }

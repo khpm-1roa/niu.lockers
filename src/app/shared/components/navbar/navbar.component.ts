@@ -13,11 +13,6 @@ export class NavbarComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.api.getRoles().subscribe((respuesta:any)=>{
-      console.log(respuesta)
-    },err=>{
-      console.log(err)
-    })
   }
 
 }

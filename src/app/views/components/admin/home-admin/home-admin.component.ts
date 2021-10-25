@@ -1,3 +1,4 @@
+import { UserModel } from './../../../../shared/models/user-model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeAdminComponent implements OnInit {
 
+  userData: UserModel;
+  token:string;
   constructor() { }
 
   ngOnInit(): void {
+    this.userData = JSON.parse(localStorage.getItem('userData'));
+    this.token = JSON.parse(localStorage.getItem('accessToken'));
   }
 
 }

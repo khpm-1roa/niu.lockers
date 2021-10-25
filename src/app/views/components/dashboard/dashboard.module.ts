@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { LockersRoutesService } from 'src/app/shared/service/lockers-routes.service';
 
 
 @NgModule({
@@ -20,6 +21,9 @@ import { FormsModule } from '@angular/forms';
     DashboardRoutingModule,
     SharedModule,
     FormsModule
+  ],
+  providers:[
+    LockersRoutesService
   ]
 })
 export class DashboardModule { }

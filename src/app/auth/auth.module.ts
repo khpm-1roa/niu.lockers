@@ -1,3 +1,4 @@
+import { LockersRoutesService } from './../shared/service/lockers-routes.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -22,6 +23,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
 
+  ],
+  providers:[
+    LockersRoutesService
   ]
 })
 export class AuthModule { }
