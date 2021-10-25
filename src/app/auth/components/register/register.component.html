@@ -14,7 +14,7 @@
                             <h4 class="msg-info" style="font-weight: bold;font-size:small">INGRESE SUS DATOS PERSONALES </h4>
                             <form [formGroup]="registroForm" >
                                 <div class="form-group"> 
-                                    <label class="form-control-label text-muted">Nombre</label> 
+                                    <label class="form-control-label text-muted">Nombre:</label> 
                                     <input type="text" id="name" placeholder="Ingrese su nombre " class="form-control" formControlName="name" > 
                                     <div *ngIf=" registroForm.controls.name.touched" class="text-danger">
                                         <div *ngIf=" registroForm.controls.name.errors?.required">{{propiedades.errorNombre}}
