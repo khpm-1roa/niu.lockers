@@ -1,7 +1,7 @@
 export interface RegisterUserModel {
   name:string;
   lastName:string;
-  companyName:string;
+  name_company:string;
   phone:string;
   email:string;
   password:string;

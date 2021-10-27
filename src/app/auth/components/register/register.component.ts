@@ -56,7 +56,7 @@ export class RegisterComponent implements OnInit {
       const newUser: RegisterUserModel = {
         name:datosForm.name,
         lastName: datosForm.names,
-        companyName: datosForm.empresa,
+        name_company: datosForm.empresa,
         phone: datosForm.celular,
         name_user: datosForm.name + ' ' + datosForm.names,
         email_user: datosForm.email,

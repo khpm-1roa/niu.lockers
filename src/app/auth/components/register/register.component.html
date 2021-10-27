@@ -1,4 +1,3 @@
-<img src="../../../.././../assets/NIU-LOCKER/picker/car5.jpg" class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100; opacity: 0.75;">
 
 
 <div class="container px-4 py-5 mx-auto">
@@ -23,8 +22,8 @@
                                         </div>
                                         <div *ngIf=" registroForm.controls.name.errors?.maxlength">{{propiedades.errorNombreMax}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.name.errors?.pattern">{{propiedades.errorNombreCarac}}
-                                        </div>
+                                        <!-- <div *ngIf=" registroForm.controls.name.errors?.pattern">{{propiedades.errorNombreCarac}}
+                                        </div> -->
                                       </div>
                                 </div>
 
@@ -38,8 +37,8 @@
                                         </div>
                                         <div *ngIf=" registroForm.controls.names.errors?.maxlength">{{propiedades.errorApellidoMax}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.names.errors?.pattern">{{propiedades.errorNombreCarac}}
-                                        </div>
+                                        <!-- <div *ngIf=" registroForm.controls.names.errors?.pattern">{{propiedades.errorNombreCarac}}
+                                        </div> -->
                                       </div>
                                 </div>
 
@@ -54,8 +53,8 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label class="form-control-label text-muted">telefono</label>
+                                <!-- <div class="form-group">
+                                    <label class="form-control-label text-muted">Celular</label>
                                     <input type="text" id="celular" placeholder="Ingrese su telefono" class="form-control" formControlName="celular" >
                                     <div *ngIf=" registroForm.controls.celular.touched" class="text-danger">
                                         <div *ngIf=" registroForm.controls.celular.errors?.required">{{propiedades.errorTelefono}}
@@ -64,11 +63,11 @@
                                         </div>
                                         <div *ngIf=" registroForm.controls.celular.errors?.maxlength">{{propiedades.errorTelefonoMax}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.celular.errors?.pattern">{{propiedades.errorTelefonoNum}}
-                                        </div>
+                                         <div *ngIf=" registroForm.controls.celular.errors?.pattern">{{propiedades.errorTelefonoNum}}
+                                        </div> 
 
-                                      </div>
-                                </div>
+                                       </div>
+                                </div> --> 
 
                                 <div class="form-group">
                                     <label class="form-control-label text-muted">Email</label>
@@ -91,8 +90,8 @@
                                         </div>
                                         <div *ngIf=" registroForm.controls.password.errors?.maxlength">{{propiedades.errorPasswordMax}}
                                         </div>
-                                        <div *ngIf=" registroForm.controls.password.errors?.pattern">{{propiedades.errorPasswordCarac}}
-                                        </div>
+                                        <!-- <div *ngIf=" registroForm.controls.password.errors?.pattern">{{propiedades.errorPasswordCarac}}
+                                        </div> -->
                                 </div>
 
                                 <!-- <div [formGroup]="form">
