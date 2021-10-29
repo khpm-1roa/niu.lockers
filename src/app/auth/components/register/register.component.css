@@ -1,9 +1,8 @@
 body {
-    color: #000;
-    overflow-x: hidden;
-    height: 100%;
-    background-image: linear-gradient(to right, #94edfd, #eeeeee);
-    background-repeat: no-repeat
+  margin:0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 input,
@@ -30,39 +29,21 @@ textarea:focus {
     font-weight: 400
 }
 
-button:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    outline-width: 0
-}
-
 .card {
     border-radius: 0;
     border: none
 }
 
 .card1 {
-    width: 50%;
+    width: 100%;
     padding: 40px 30px 10px 30px
 }
-
-.card2 {
-    color: black;
-    width: 50%;
-    background-image: linear-gradient(to right, #9feffa, #bec4c3)
-}
-
 
 
 .heading {
     margin-bottom: 60px !important
 }
 
-::placeholder {
-    color: #000 !important;
-    opacity: 1
-}
 
 :-ms-input-placeholder {
     color: #000 !important
@@ -129,10 +110,6 @@ a:hover {
 }
 
 @media screen and (max-width: 992px) {
-    .card1 {
-        width: 100%;
-        padding: 40px 30px 10px 30px
-    }
 
     .card2 {
         width: 100%

@@ -1,64 +1,89 @@
-/* footer */
+*{
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0px;
+  font-family: robotto;
+  background-image: radial-gradient(circle at 51.85% 50%, #ffffff 0, #ffffff 50%, #f0f6f4 100%);
+  color: rgb(0, 0, 0);
+  border-top: 1px solid #000;
+  font-family: sans-serif;
+}
+footer{
+  padding: 40px 0;
+  background: #fff;
+}
+.footer .social{
+  text-align: center;
+  padding-bottom: 25px;
+  color: #0571af;
+  margin-top: 10px;
+}
 
-footer {
-    background: #ebeef0e5;
-    padding: 5px 0;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: auto;
+.footer .social a{
+  font-size: 24px;
+  color: inherit;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0 8px;
+  opacity: 0.75;
+}
 
+.footer .social a:hover{
+  opacity: 0.9;
+}
+
+.footer ul{
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer ul li a{
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer ul li{
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.footer ul li a:hover{
+  opacity: 1;
+}
+
+.footer .copyright{
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.Apple{
+  position: relative;
+  top: -215px;
+  right: -200px;
+}
+
+@media only screen and (max-width: 520px) and (min-width: 100px) {
+  body{
+    width: 100%;
+    position: absolute;
+    left: 0px;
   }
-  
-  .partFooter {
-    width: 20%;
-    text-align: center;
-  }
-  
-  .partFooter h4 {
-    color: #1d273b;
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 30px;
-  }
-  
-  .partFooter a {
-    display: block;
-    text-decoration: none;
-    color: #5D6678;
-    font-weight: 300;
-    transition: color .3s ease-in-out;
-    margin-bottom: 10px;
-  }
-  
-  
-  .partFooter a:hover {
-    color: #1FDE82;
-  }
-  
-  .partFooter img {
-    width: 70%;
-  }
-  
-  .social-media i {
-    font-size: 20px;
-    display: inline-block;
-    color: #adb6c7;
-    border: 1px solid #adb6c7;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    line-height: 36px;
-    cursor: pointer;
-    margin-top: 20px;
-    text-align: center;
-    transition: all ease-in-out .3s;
-    margin-right: 5px;
-  }
-  
-  .social-media i:hover {
-    color: #fff;
-    background-color: #1FDE82;
-    border-color: #1FDE82;
-  }
+}

@@ -1,3 +1,43 @@
+.General{
+  background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffff 50%, #ffffff 100%);
+  height: 100%;
+  width: 100%;
+}
+img{
+  margin-top: 15px;
+}
+.container{
+  text-align: center;
+  justify-content: center;
+  width: 35%;
+  border: 1px rgb(138, 138, 138) solid;
+  margin-top: 14px;
+  border-radius: 15px;
+}
 .imglogo{
     border-radius:200px;
+}
+
+button{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 50%;
+  padding: 10px;
+  background: #0ea7de;
+  color: #fff;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 620px) and (min-width: 221px) {
+
+  .container{
+  text-align: center;
+  justify-content: center;
+  width: 95%;
+  border: 1px #000 solid;
+  margin-top: 50px;
+  }
+
 }

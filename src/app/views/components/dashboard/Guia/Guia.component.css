@@ -1,0 +1,31 @@
+.ContenedorGeneral{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0px;
+  border-top: 1px solid rgb(150, 150, 150);
+}
+.contSegundario{
+  margin-top: 35px;
+}
+button[type="submit"]{
+  padding: 5px;
+  width: 120px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: #3cb5f2 ;
+  color: #fff;
+  transition: 0.2s;
+  margin-bottom: 25px;
+}
+button[type="submit"]:hover{
+  background: #009ce9 ;
+}
+
+video{
+  width: 65%;
+  border: 5px solid #3cb5f2;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}

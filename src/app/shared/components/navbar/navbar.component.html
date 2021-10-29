@@ -1,82 +1,19 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info" >
-    <div class="container-fluid">
-      <img src="../../../assets/NIU-LOCKER/Logo-NiuSmart.svg" alt="Logo Niu-Smart NiuLocker" style="height: 60px; width: 60px;">
-      <div class="col mt-3">
-        <h5><a class="navbar-brand mg-2" [routerLink]="['/']" style="font-family: sans-serif; color:#fff;">NIU <br> SMART</a></h5>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <div class="col">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" [routerLink]="['/products']" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #fff;">
-              Productos
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li class="dropdown-divider"></li>
-              <span class="dropdown-item-text">PARA NEGOCIOS</span>
-              <li><span class="dropdown-item-text" style="color: green;"> DE INMEDIATO</span></li>
-              <li><a class="dropdown-item" href="#">Envios Manuales <br> <p>Tu creas los pedidos</p></a></li>
-              <li><span class="dropdown-item-text" style="color: green;"> INTEGRACIONES</span></li>
-              <li><a class="dropdown-item" href="#">API Delivery <br> <p>Conexion a eCommerce</p></a></li>
-            </ul>
-          </li>
-          </div>
-          <div class="col">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color: #fff;" [routerLink]="['/developer']" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Desarrolladores
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../desarrolladores/desarrolladores.component.html">Documentación</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">API ROUTS</a></li>
-              <li><a class="dropdown-item" href="#">endpoint 1</a></li>
-              <li><a class="dropdown-item" href="#">endpoint 2</a></li>
-              <li><a class="dropdown-item" href="#">endpoint 3</a></li>
-              <li><a class="dropdown-item" href="#">endpoint 4</a></li>
-              
-             
-            </ul>
-          </li>
-        </div>
-        <div class="col">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" style="color: #fff;" [routerLink]="['/company']" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Compañia
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Sobre Nosotros <br> <p>Conoce mas</p></a></li>
-              <li><a class="dropdown-item" href="#">Clientes <br> <p>Siempre felices</p></a></li>
-              <li><a class="dropdown-item" href="#">Partners <br> <p>Alianza Estrategica</p></a></li>
-              <li><a class="dropdown-item" href="#">Blog <br> <p>Ultimas noticias</p></a></li>
-            </ul>
-          </li>
-        </div>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/prices']" style="color: #fff;">Precios</a>
-          </li>
-          <div class="col">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" style="color: #fff;" [routerLink]="['/delivery']" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Repartidores
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </div>
-          
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/login']" style="color: #fff;">Registrarse</a>
-          </li>
+<div class="General">
+  <header>
+    <nav>
+        <input type="checkbox" id="ckbox">
+        <label for="ckbox" class="drawer">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </label>
+        <img src="https://niulocker.app/assets/images/logoFinal.png" alt="Logo NiuLocker">
+        <ul class="menu-box">
+            <li><a class="nav-link"> Desarrolladores</a></li>
+            <li><a href="https://niulocker.com/" class="nav-link"> Compañia</a></li>
+            <li><a class="nav-link"> Precios</a></li>
+            <li><a class="nav-link"> Repartidores</a> </li>
 
         </ul>
-      </div>
-    </div>
-  </nav>
+        <button type="submit" [routerLink]="['/login']">Iniciar Sesion</button>
+    </nav>
+  </header>
+</div>

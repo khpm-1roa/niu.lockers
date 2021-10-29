@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
-      password: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(50)]]
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(50)]]
 
 
     })
@@ -46,23 +46,17 @@ export class LoginComponent implements OnInit {
           console.log('Respuesta', res);
           const token = res.token;
           localStorage.setItem('accessToken',JSON.stringify(token))
-          /* Desencriptar el token */
+          /* Desencriptar el token
+          const email. nombre,
+          */
 
-          let idUser:number = 2 /* Aqui colocar la id del token desencriptado */
-
-          this.locker.getUserData(idUser)
-            .subscribe((res:any)=>{
-              console.log('respues data',res);
-              localStorage.setItem('userData',JSON.stringify(res));
-              if(res.rol_id == 1){
-                this.router.navigate(["client"])
+          localStorage.setItem('userData',JSON.stringify(res.user));
+              if(res.user.rol_id == 1){
+                this.router.navigate(["/client"])
               }
-              if(res.rol_id == 2){
+              if(res.user.rol_id == 2){
                 this.router.navigate(["admin"])
               }
-            },err=>{
-              console.log(err)
-            })
         },err=>{
           console.log('Error',err)
         })

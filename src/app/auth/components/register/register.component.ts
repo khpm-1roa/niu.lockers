@@ -17,15 +17,8 @@ export class RegisterComponent implements OnInit {
   propiedades: Propiedades = new Propiedades();
   // generar un patter de la contraseña caracteres especiales
 
-  private usuarioPattern: any = /^[a-zA-Z0-9\_\-]{4,16}$/; // Letras, numeros, guion y guion_bajo
-  private nombrePattern: any = /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
 
-  private celuPattern: any = /^\d{7,10};/ // 7 a 14 numeros.
-
-  private telefonoPattern: any = /^\d{10,10};/;
   private emailPattern: any = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-
   registroForm!: FormGroup;
   errorregistro: boolean = false;
 
@@ -38,13 +31,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
 
     this.registroForm = this.fb.group({
+
       name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(25), Validators.pattern(/^[a-zA-z]+$/)]],
       names: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(25), Validators.pattern(/^[a-zA-z]+$/)]],
       empresa: ['', [Validators.required, Validators.pattern(/^[a-zA-z]+$/)]],
-      celular: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]+$/)]],
       email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
-      password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(50), Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!"#$%&'()*+,-./:;<=>?@^_`{|}~]).{6,}$/)]]
-
+      password: ['', [Validators.required, Validators.minLength(7), Validators.maxLength(50)]]
     })
   }
 
@@ -57,7 +49,6 @@ export class RegisterComponent implements OnInit {
         name:datosForm.name,
         lastName: datosForm.names,
         name_company: datosForm.empresa,
-        phone: datosForm.celular,
         name_user: datosForm.name + ' ' + datosForm.names,
         email_user: datosForm.email,
         email: datosForm.email,

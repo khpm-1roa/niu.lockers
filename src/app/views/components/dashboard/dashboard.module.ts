@@ -7,6 +7,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import {GuiaComponent} from './Guia/Guia.component'
+import {ListaUserComponent} from './ListaUser/ListaUser.component'
 import { LockersRoutesService } from 'src/app/shared/service/lockers-routes.service';
 
 
@@ -14,7 +16,9 @@ import { LockersRoutesService } from 'src/app/shared/service/lockers-routes.serv
   declarations: [
     DashboardComponent,
     HomePageComponent,
-    DeveloperComponent
+    DeveloperComponent,
+    GuiaComponent,
+    ListaUserComponent
   ],
   imports: [
     CommonModule,

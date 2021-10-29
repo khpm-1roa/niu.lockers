@@ -1,3 +1,59 @@
-.boton.desa{
-    cursor: pointer;
+.ContenedorPrincipal{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.endPoints{
+  width: 380px;
+  border-right: 1px solid #000;
+}
+img{
+  height: 150px;
+  width: 500px;
+  position: relative;
+  left: 150px;
+}
+p{
+  text-align: justify;
+}
+.dEndPoint{
+  text-align: center;
+}
+li {
+  color: #7e7e7e;
+  cursor: pointer;
+}
+li:hover{
+  color: #494949;
+  cursor: pointer;
+}
+@media only screen and (max-width:760px) and (min-width: 100px){
+  .ContenedorPrincipal{
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+  }
+  .endPoints{
+    width: 90%;
+    border-right: 1px solid #000;
+    text-align: center;
+    justify-content: center;
+    border-right: none;
+    border-bottom: 1px solid rgb(182, 182, 182);
+    border-top: 1px solid rgb(182, 182, 182);
+    margin-left: 25px;
+  }
+  img{
+    width: 390px;
+    margin-left: 15px;
+    position: relative;
+    left: 0px;
+  }
+  p{
+    margin-left: 20px;
+  }
 }

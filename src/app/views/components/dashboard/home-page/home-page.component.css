@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.Contenedor_Principal{
+  width: 100%;
+  background-image: radial-gradient(circle at 50% 50%, #ffffff 0, #ffffff 25%, #ffffff 50%, #f3f8f7 75%, #e8f2ef 100%);
+  padding: 15px;
+}
+
+.Cuerpo2 h1, h2, p{
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+
+
+.Cuerpo3{
+  margin-top: 50px;
+  margin-right: 25px;
+}
+.Cuerpo4{
+  background: #fff;
+  margin-top: 50px;
+}
+/*Video*/
+.videoP video{
+  border: 5px solid #0571af ;
+  height:500px;
+  width:auto;
+}
+
+
+
+.documentacion{
+  margin-top: 65px;
+
+}
+.documentacion img{
+  width: 600px;
+
+}
+/*Btn Guia*/
+.BtnGuia{
+  background: none;
+  text-align:center;
+}
+.BtnGuia button[type="submit"]{
+  padding: 5px;
+  width: 160px;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: #3cb5f2 ;
+  color: #fff;
+  transition: 0.2s;
+  margin-top: 25px ;
+}
+.BtnGuia button[type="submit"]:hover{
+  background: #009ce9 ;
+}
+
+/*Btn Documentacion*/
+.BtnDoc{
+  background: none;
+  text-align: center;
+}
+
+.BtnDoc button[type="submit"]{
+  padding: 8px;
+  width: 250px;
+  border-radius: 50px;
+  border:none;
+  background: #39ac4b ;
+  color: #fff;
+
+}
+
+.BtnDoc button[type="submit"]:hover{
+  background: #48d65d ;
+
+}
+
+
+@media only screen and (max-width: 620px) and (min-width: 221px) {
+
+  img{
+    border: 1px solid #0571af;
+  }
+  .videoP video{
+    border: 5px solid #0571af ;
+    height:310px;
+    width:auto;
+  }
+  .documentacion{
+    margin-left: 5px;
+    position: relative;
+    top: -130px;
+    text-align: center;
+    justify-content: center;
+}
+.documentacion img{
+    width: 350px;
+    margin-left: -15px;
+}
+
+.Contenedor_Principal{
+    justify-content: center;
+    text-align:center;
+    justify-content: center;
+}
+.Cuerpo2 h1, h2, p{
+    margin-top: 0;
+    margin-left: 0;
+  text-align: center;
+}
+
+}
