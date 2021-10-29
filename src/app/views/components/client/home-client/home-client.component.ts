@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeClientComponent implements OnInit {
 
+  lectura:boolean = true;
+
+  /* crear un formulario y que el formlario tome ñlos valores de localStorage de userData pathValue */
+
+  /* crear un formulario html con la directivas *ngIf */
+
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  /* crear una funcion que hacer update  */
 
 }

@@ -1,3 +1,4 @@
+import { UserModel } from './../models/user-model';
 import { LoginUserModel } from './../../auth/models/login';
 import { UrlLockerService } from './url-locker.service';
 import { RegisterUserModel } from './../../auth/models/register-user-model';
@@ -25,6 +26,11 @@ export class LockersRoutesService {
 
   getUserData(idUser:number){
     return this.http.get(`${this.urlLockers.userContext}/${idUser}`);
+  }
+
+  /* Update */
+  updateUser(idUser:number,user:UserModel){
+    return this.http.put(`${this.urlLockers.userContext}/${idUser}`,user);
   }
 
 }
