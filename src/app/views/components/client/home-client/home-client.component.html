@@ -19,32 +19,33 @@
   <!-- Datos de asociado -->
   <div class="card" *ngIf="lectura">
     <div class="card-header text-center">
-      <h3 class="text-info">Perfil</h3>
+      <h3 class="text-info">Datos Personales</h3>
     </div>
     <div class="card-body text-center">
       <div class="thumbnail" style="align-content: center">
 
-        Nombre : Kevin Pillajo
+        Nombre :{{userData.name_user}}
       </div>
       <br>
       <div class="text-primary">
-        Correo:Kevin@811.com
+        Correo:{{userData.email_user}}
       </div>
       <br>
-      <div class="pb-1">
+      <!-- <div class="pb-1">
         Token lectura: 1231
-      </div>
+      </div> -->
       <br>
       <div class=" text-primary">
-        Nombre de la empresa : Niu-Locker
+        Nombre de la empresa : {{userData.name_company}}
       </div>
     </div>
-    <button type="submit" class="btn-block btn-color" (click)="lectura = !lectura">Modificar</button>
+    <!-- <button type="submit" class="btn-block btn-color" (click)="lectura = !lectura">Modificar</button> -->
   </div>
   <div *ngIf="!lectura">
-    <h5>Modificar</h5>
+    <h5>Mod</h5>
     <form >
 
     </form>
   </div>
 </section>
+
